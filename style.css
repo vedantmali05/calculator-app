@@ -164,8 +164,6 @@ body {
     text-align: right;
     color: var(--text);
     font-weight: 600;
-    overflow: auto;
-
 }
 
 .screenBox .screen::placeholder {
