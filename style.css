@@ -182,7 +182,7 @@ body {
     padding: 2.5rem;
     display: grid;
     grid-template-columns: auto auto auto auto;
-    gap: 2rem;border: 1px solid white;
+    gap: 2rem;
 }
 
 .keypad .num,
