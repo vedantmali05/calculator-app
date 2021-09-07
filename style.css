@@ -165,7 +165,7 @@ body {
     color: var(--text);
     font-weight: 600;
     overflow: auto;
-border: 1px solid white;
+
 }
 
 .screenBox .screen::placeholder {
@@ -182,7 +182,7 @@ border: 1px solid white;
     padding: 2.5rem;
     display: grid;
     grid-template-columns: auto auto auto auto;
-    gap: 2rem;
+    gap: 2rem;border: 1px solid white;
 }
 
 .keypad .num,
