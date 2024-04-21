@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Calculator app</title>
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- CALCULATOR -->
+    <main class="container">
+
+
+        <!-- HEADING -->
+        <section class="heading">
+            <!-- LOGO -->
+            <h1 class="logo">calc</h1>
+
+            <!-- THEME CHANGING ZONE -->
+            <div class="themeBox">
+                <!-- theme label -->
+                <label>THEME</label>
+                <!-- theme number -->
+                <div class="themeBtn">
+                    <div class="themeNumBox">
+                        <span class="theme1Num themeNum">1</span>
+                        <span class="theme2Num themeNum">2</span>
+                        <span class="theme3Num themeNum">3</span>
+                    </div>
+                    <!-- theme toggle box -->
+                    <div class="toggleBox">
+                        <div class="toggle">
+                            <span class="thumb theme1"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- SCREEN -->
+        <section class="screenBox">
+            <input type="text" class="screen" placeholder="0">
+        </section>
+
+
+        <!-- KEYPAD -->
+        <section class="keypad">
+            <span class="num">7</span>
+            <span class="num">8</span>
+            <span class="num">9</span>
+            <span class="custKey del">DEL</span>
+            <span class="num">4</span>
+            <span class="num">5</span>
+            <span class="num">6</span>
+            <span class="num">+</span>
+            <span class="num">1</span>
+            <span class="num">2</span>
+            <span class="num">3</span>
+            <span class="num">-</span>
+            <span class="num">.</span>
+            <span class="num">0</span>
+            <span class="num">/</span>
+            <span class="num">x</span>
+            <span class="custKey reset">RESET</span>
+            <span class="solve">=</span>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

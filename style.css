@@ -1,0 +1,245 @@
+* {
+    font-family: "Spartan", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    font-weight: 700;
+    user-select: none;
+}
+
+:root {
+    --textWhite: #ffffff;
+    /* ****************** THEME 1 ****************** */
+    /* Background */
+    --mainBg: #3a4764;
+    --keypadBg: #232c43;
+    --inputBg: #182034;
+    /* keys */
+    --key: #637097;
+    --keyShadow: #404e72;
+    --keySolve: #d03f2f;
+    --keySolveShadow: #93261a;
+    --keyNum: #eae3dc;
+    --keyNumShadow: #b4a597;
+    /* Texts */
+    --text: #fff;
+}
+
+html {
+    font-size: 63.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background: var(--mainBg);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* CONTAINER */
+
+.container {
+    width: 46rem;
+    margin: 2rem;
+}
+
+
+/* heading */
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.logo {
+    font-size: 3rem;
+    transition: all 0.2s linear;
+    color: var(--text);
+}
+
+.themeBox {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1rem;
+}
+
+.themeBox label {
+    font-weight: 500;
+    transition: all 0.2s linear;
+    color: var(--text);
+}
+
+.themeBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.themeBtn .themeNumBox {
+    position: relative;
+    width: 4.5rem;
+}
+
+.themeBtn .themeNumBox span {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    font-weight: 500;
+    height: 4rem;
+    width: 1.4rem;
+    z-index: 1;
+    cursor: pointer;
+    left: 0.4rem;
+    transition: all 0.2s linear;
+    color: var(--text);
+}
+
+.toggleBox {
+    height: 100%;
+}
+
+.toggle {
+    height: 2rem;
+    width: 6rem;
+    border-radius: 100px;
+    background: var(--keypadBg);
+    position: relative;
+    padding: 0.4rem;
+}
+
+.toggle .thumb {
+    position: absolute;
+    background: var(--keySolve);
+    border-radius: 50%;
+    height: 1.4rem;
+    width: 1.4rem;
+    top: 50%;
+    left: 0.4rem;
+    transform: translateY(-50%);
+}
+
+.toggle .thumb.theme2,
+.themeNumBox span:nth-child(2) {
+    left: 2.4rem;
+}
+
+.toggle .thumb.theme3,
+.themeNumBox span:nth-child(3) {
+    left: 4.4rem;
+}
+
+
+/* SCREEN */
+
+.screenBox {
+    background: var(--inputBg);
+    height: 10rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.screenBox .screen {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 4.5rem;
+    text-align: right;
+    color: var(--text);
+    font-weight: 600;
+    overflow-x: auto;
+}
+
+.screenBox .screen::placeholder {
+    color: var(--text);
+}
+
+
+/* KEYPAD */
+
+.keypad {
+    border-radius: 10px;
+    background: var(--keypadBg);
+    margin: 2rem 0;
+    padding: 2.5rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 2rem;
+}
+
+.keypad .num,
+.keypad .custKey,
+.keypad .solve {
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 3rem;
+    color: var(--text);
+    background: var(--keyNum);
+    box-shadow: 0 3px var(--keyNumShadow);
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    filter: brightness(100%);
+    align-items: center;
+}
+
+.keypad .num:hover,
+.keypad .custKey:hover,
+.keypad .solve:hover {
+    filter: brightness(85%);
+}
+
+.keypad .num:active,
+.keypad .custKey:active,
+.keypad .solve:active {
+    box-shadow: none;
+    transform: scale(0.95);
+}
+
+.keypad .custKey {
+    font-size: 1.8rem;
+    background: var(--key);
+    color: var(--textWhite);
+    box-shadow: 0 3px var(--keyShadow);
+}
+
+.keypad .solve {
+    font-size: 1.8rem;
+    color: var(--textWhite);
+    background: var(--keySolve);
+    box-shadow: 0 3px var(--keySolveShadow);
+    grid-column: span 2/5;
+}
+
+.keypad .custKey.reset {
+    grid-column: span 2/3;
+}
+
+@media (max-width: 425px) {
+    html {
+        font-size: 55.5%;
+    }
+    .keypad {
+        gap: 1.2rem;
+    }
+}

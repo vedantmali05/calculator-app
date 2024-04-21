@@ -1,0 +1,25 @@
+# Node.js
+node_modules/
+
+# Build files
+dist/
+build/
+design/*
+!design/desktop-design-theme-1.jpg
+
+# Dependency directory
+lib/
+
+# Visual Studio Code
+.vscode/
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Prettier
+prettier.config.js
+
+# Editors
+.history
